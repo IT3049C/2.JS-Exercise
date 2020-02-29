@@ -1,44 +1,56 @@
-exports = typeof window === 'undefined' ? global : window;
 
-exports.arraysAnswers = {
-  // Refer to the Array's Documentation:
+// Refer to the Array's Documentation:
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
-  indexOf: function(arr, item) {
+function indexOf(arr, item) {
+  return arr.indexOf(item);
+}
 
-  },
+function sum(arr) {
+  return ;
+}
 
-  sum: function(arr) {
-  },
+function remove(arr, item) {
+  return ;
+}
 
-  remove: function(arr, item) {
+function append(arr, item) {
+  return ;
+}
 
-  },
+function truncate(arr) {
+  return ;
+}
 
-  append: function(arr, item) {
-    
-  },
+function prepend(arr, item) {
+  return ;
+}
 
-  truncate: function(arr) {
+function curtail(arr) {
+  return ;
+}
 
-  },
+function concat(arr1, arr2) {
+  return ;
+}
 
-  prepend: function(arr, item) {
-   
-  },
+function insert(arr, item, index) {
+  return ;
+}
 
-  curtail: function(arr) {
+function square(arr) {
+  return ;
+}
 
-  },
-
-  concat: function(arr1, arr2) {
-
-  },
-
-  insert: function(arr, item, index) {
-
-  },
-
-  square: function(arr) {
-
-  }
-};
+exports = typeof window === 'undefined' ? global : window;
+exports.arraysAnswers = {
+  indexOf,
+  sum,
+  remove,
+  append,
+  truncate,
+  prepend,
+  curtail,
+  concat,
+  insert,
+  square
+}

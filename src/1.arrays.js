@@ -1,5 +1,5 @@
 
-// Refer to the Array's Documentation:
+// Refer to the Array`s Documentation:
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 function indexOf(arr, item) {
   return arr.indexOf(item);
@@ -41,7 +41,6 @@ function square(arr) {
   return ;
 }
 
-exports = typeof window === 'undefined' ? global : window;
 exports.arraysAnswers = {
   indexOf,
   sum,

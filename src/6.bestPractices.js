@@ -1,6 +1,3 @@
-/* eslint-disable */
-exports = typeof window === 'undefined' ? global : window;
-
 /**
  * This file defines an object with some methods. Some of these methods are
  * populated incorrectly; your job is to fix them. Other methods are not
@@ -10,7 +7,7 @@ exports = typeof window === 'undefined' ? global : window;
 exports.bestPracticesAnswers = {
   globals: function() {
     myObject = {
-      name: 'Jory'
+      name: `Jory`
     };
 
     return myObject;

@@ -1,5 +1,3 @@
-exports = typeof window === 'undefined' ? global : window;
-
 exports.numbersAnswers = {
   add: function(num1, num2) {
 

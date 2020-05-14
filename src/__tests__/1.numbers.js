@@ -14,9 +14,13 @@ describe(`Numbers Tests`, function () {
     expect(numbersAnswers.multiply(3, 2)).toEqual(6);
   });
 
-  it(`parseInt: when provided a stringified number, it returns the number` , function () {
+  it(`parseInt: should use parseInt correctly`, function () {
     const result = numbersAnswers.parseInt(`2342`);
     expect(result).toEqual(2342);
     expect(typeof result).toEqual(`number`);
+    expect(numbersAnswers.parseInt(`12`)).toEqual(12);
+    expect(numbersAnswers.parseInt(`12px`)).toEqual(12);
+    expect(numbersAnswers.parseInt(`0x12`)).toEqual(0);
   });
+
 });

@@ -4,12 +4,10 @@
  * populated at all; your job is to fill them out.
  */
 
-module.exports = {
-  parseInt: function(num) {
-    return Number.parseInt(num, 10);
-  },
+function identity(val1, val2) {
+  return val1 === val2;
+}
 
-  identity: function(val1, val2) {
-    return val1 === val2;
-  }
+module.exports = {
+  identity
 };

@@ -1,9 +1,12 @@
+function or(a, b) {
+  
+}
+
+function and(a, b) {
+  
+}
+
 module.exports = {
-  or: function(a, b) {
-
-  },
-
-  and: function(a, b) {
-
-  }
+  or,
+  and
 };

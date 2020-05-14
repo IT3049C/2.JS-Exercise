@@ -1,13 +1,12 @@
+function argsAsArray(fn, arr) {
+
+}
+
+function speak(fn, obj) {
+
+}
+
 module.exports = {
-  argsAsArray: function(fn, arr) {
-
-  },
-
-  speak: function(fn, obj) {
-
-  },
-
-  makeClosures: function(arr, fn) {
-    
-  }
+  argsAsArray,
+  speak
 };

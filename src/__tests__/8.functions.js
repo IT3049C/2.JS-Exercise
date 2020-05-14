@@ -30,18 +30,4 @@ describe(`8. functions`, function () {
     expect(result).toEqual(`Hello, Rebecca!!!`);
     expect(sayItCalled).to.be.ok;
   });
-
-  it(`you should be able to use closures`, function () {
-    const arr = [ Math.random(), Math.random(), Math.random(), Math.random() ];
-    const square = function (x) {
-      return x * x;
-    };
-
-    const funcs = functionsAnswers.makeClosures(arr, square);
-    expect(funcs).to.have.length(arr.length);
-
-    for (const i = 0; i < arr.length; i++) {
-      expect(funcs[i]()).toEqual(square(arr[i]));
-    }
-  });
 });

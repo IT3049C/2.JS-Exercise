@@ -1,5 +1,7 @@
-module.exports = {
-  listFiles: function(data) {
+function listFiles(data) {
 
-  }
+}
+
+module.exports = {
+  listFiles
 };

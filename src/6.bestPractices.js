@@ -4,20 +4,12 @@
  * populated at all; your job is to fill them out.
  */
 
-exports.bestPracticesAnswers = {
-  globals: function() {
-    myObject = {
-      name: `Jory`
-    };
-
-    return myObject;
-  },
-
+module.exports = {
   parseInt: function(num) {
-
+    return Number.parseInt(num, 10);
   },
 
   identity: function(val1, val2) {
-  
+    return val1 === val2;
   }
 };

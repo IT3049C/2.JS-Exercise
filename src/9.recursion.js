@@ -1,4 +1,4 @@
-exports.recursionAnswers = {
+module.exports = {
   listFiles: function(data) {
 
   }

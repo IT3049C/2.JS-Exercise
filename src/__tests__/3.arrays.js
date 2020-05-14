@@ -1,6 +1,6 @@
-const arraysAnswers = require(`../1.arrays`);
+const arraysAnswers = require(`../3.arrays`);
 
-describe(`1. arrays`, function () {
+describe(`Arrays Questions`, function () {
   let a;
 
   beforeEach(function () {

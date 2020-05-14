@@ -1,4 +1,4 @@
-exports.logicalOperatorsAnswers = {
+module.exports = {
   or: function(a, b) {
 
   },

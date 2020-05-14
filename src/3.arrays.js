@@ -41,7 +41,7 @@ function square(arr) {
   return ;
 }
 
-exports.arraysAnswers = {
+module.exports = {
   indexOf,
   sum,
   remove,
@@ -52,4 +52,4 @@ exports.arraysAnswers = {
   concat,
   insert,
   square
-}
+};

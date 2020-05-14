@@ -1,7 +1,7 @@
 const functionsAnswers = require(`../8.functions`);
 
 describe(`8. functions`, function () {
-  const sayItCalled = false;
+  let sayItCalled = false;
   const sayIt = function (greeting, name, punctuation) {
     sayItCalled = true;
     return greeting + `, ` + name + (punctuation || `!`);

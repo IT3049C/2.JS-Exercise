@@ -1,4 +1,4 @@
-exports.functionsAnswers = {
+module.exports = {
   argsAsArray: function(fn, arr) {
 
   },

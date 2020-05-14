@@ -19,10 +19,10 @@ describe(`2. strings`, function () {
     });
   });
 
-  it(`reduceString: you should be able to reduce duplicate characters to a desired minimum`, function () {
-    expect(stringsAnswers.reduceString(`aaaabbbb`, 2)).toEqual(`aabb`);
-    expect(stringsAnswers.reduceString(`xaaabbbb`, 2)).toEqual(`xaabb`);
-    expect(stringsAnswers.reduceString(`aaaabbbb`, 1)).toEqual(`ab`);
-    expect(stringsAnswers.reduceString(`aaxxxaabbbb`, 2)).toEqual(`aaxxaabb`);
+  it(`capitalize: should return the input in all-caps`, function  {
+    const result = stringsAnswers.capitalize(`this is web game development`);
+    
+    expect(result).toEqual(`THIS IS WEB GAME DEVELOPMENT`);
   });
+
 });

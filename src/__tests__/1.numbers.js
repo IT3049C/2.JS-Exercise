@@ -1,6 +1,6 @@
-const numbersAnswers = require(`../5.numbers`);
+const numbersAnswers = require(`../1.numbers`);
 
-describe(`3. numbers`, function () {
+describe(`Numbers Tests`, function () {
   it(`you should be able to add numbers`, function () {
     expect(numbersAnswers.add(200, 10)).toEqual(210);
   });
@@ -12,5 +12,11 @@ describe(`3. numbers`, function () {
   it(`you should be able to multiply with precision`, function () {
     expect(numbersAnswers.multiply(4, 0.1)).toEqual(0.4);
     expect(numbersAnswers.multiply(3, 2)).toEqual(6);
+  });
+
+  it(`parseInt: when provided a stringified number, it returns the number` , function () {
+    const result = numbersAnswers.parseInt(`2342`);
+    expect(result).toEqual(2342);
+    expect(typeof result).toEqual(`number`);
   });
 });

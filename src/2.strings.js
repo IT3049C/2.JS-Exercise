@@ -1,9 +1,13 @@
-exports.stringsAnswers = {
-  reverseString: function(str) {
 
-  },
+function reverseString(str) {
 
-  reduceString: function(str, amount) {
-    
-  }
+}
+
+function capitalize(str) {
+
+}
+
+module.exports = {
+  reverseString,
+  capitalize
 };

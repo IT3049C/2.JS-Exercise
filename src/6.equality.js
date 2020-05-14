@@ -1,13 +1,18 @@
-/**
- * This file defines an object with some methods. Some of these methods are
- * populated incorrectly; your job is to fix them. Other methods are not
- * populated at all; your job is to fill them out.
- */
-
-function identity(val1, val2) {
+// strictEquality: compare value & type
+// Example: strictEquality(1, true) => false
+// Example: strictEquality(1, 1) => true
+function strictEquality(val1, val2) {
   return val1 === val2;
+}
+//equality: compare value but not necessarily the type
+// Example: equality(1, true) => true
+// Example: equality(1, 1) => true
+// Example: equality(1, false) => false
+function equality(val1, val2) {
+  return val1 == val2;
 }
 
 module.exports = {
-  identity
+  strictEquality,
+  equality
 };

@@ -1,10 +1,17 @@
-const bestPracticesAnswers = require(`../6.equality`);
+const equalityAnswers = require(`../6.equality`);
 
-describe(`6. best practices`, function () {
+describe(`6. Equality questions`, function () {
 
-  it(`you should understand strict comparison`, function () {
-    expect(bestPracticesAnswers.identity(1, `1`)).toEqual(false);
-    expect(bestPracticesAnswers.identity(1, 1)).toEqual(true);
-    expect(bestPracticesAnswers.identity(0, false)).toEqual(false);
+  it(`strictEquality: compare value & type`, function () {
+    expect(equalityAnswers.strictEquality(1, `1`)).toBeFalsy();
+    expect(equalityAnswers.strictEquality(1, 1)).toBeTruthy();
+    expect(equalityAnswers.strictEquality(0, false)).toBeFalsy();
+  });
+
+  it(`equality: compare value but not necessarily the type`, function () {
+    expect(equalityAnswers.equality(1, `1`)).toBeTruthy();
+    expect(equalityAnswers.equality(1, 1)).toBeTruthy();
+    expect(equalityAnswers.equality(0, false)).toBeTruthy();
+    expect(equalityAnswers.equality(0, 1)).toBeFalsy();
   });
 });

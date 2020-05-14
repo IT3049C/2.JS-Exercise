@@ -1,19 +1,19 @@
 const logicalOperatorsAnswers = require(`../4.logicalOperators`);
 
 describe(`4. logical operators`, function () {
-  it(`you should be able to work with logical or`, function () {
-    expect(logicalOperatorsAnswers.or(false, true)).to.be.ok;
-    expect(logicalOperatorsAnswers.or(true, false)).to.be.ok;
-    expect(logicalOperatorsAnswers.or(true, true)).to.be.ok;
-    expect(logicalOperatorsAnswers.or(false, false)).not.to.be.ok;
-    expect(logicalOperatorsAnswers.or(3, 4)).to.not.eq(7);
+  it(`or: should return true if either a or b are truthy. False, if both are false`, function () {
+    expect(logicalOperatorsAnswers.or(false, true)).toBeTruthy();
+    expect(logicalOperatorsAnswers.or(true, false)).toBeTruthy();
+    expect(logicalOperatorsAnswers.or(true, true)).toBeTruthy();
+    expect(logicalOperatorsAnswers.or(false, false)).toBeFalsy();
+    expect(logicalOperatorsAnswers.or(3, 4)).not.toEqual(7);
   });
 
-  it(`you should be able to work with logical and`, function () {
-    expect(logicalOperatorsAnswers.and(false, true)).not.to.be.ok;
-    expect(logicalOperatorsAnswers.and(false, false)).not.to.be.ok;
-    expect(logicalOperatorsAnswers.and(true, false)).not.to.be.ok;
-    expect(logicalOperatorsAnswers.and(true, true)).to.be.ok;
-    expect(logicalOperatorsAnswers.and(3, 4)).to.be.ok;
+  it(`and: should return true only if both a and b are truthy`, function () {
+    expect(logicalOperatorsAnswers.and(false, true)).toBeFalsy();
+    expect(logicalOperatorsAnswers.and(false, false)).toBeFalsy();
+    expect(logicalOperatorsAnswers.and(true, false)).toBeFalsy();
+    expect(logicalOperatorsAnswers.and(true, true)).toBeTruthy();
+    expect(logicalOperatorsAnswers.and(3, 4)).toBeTruthy();
   });
 });

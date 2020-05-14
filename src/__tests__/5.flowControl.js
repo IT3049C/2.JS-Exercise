@@ -8,8 +8,8 @@ describe(`5. flow control`, function () {
       num = Math.floor(Math.random() * 10) + 1;
     }
 
-    expect(flowControlAnswers.fizzBuzz()).not.to.be.ok;
-    expect(flowControlAnswers.fizzBuzz(`foo`)).not.to.be.ok;
+    expect(flowControlAnswers.fizzBuzz()).toBeFalsy();
+    expect(flowControlAnswers.fizzBuzz(`foo`)).toBeFalsy();
     expect(flowControlAnswers.fizzBuzz(2)).toEqual(2);
     expect(flowControlAnswers.fizzBuzz(101)).toEqual(101);
 

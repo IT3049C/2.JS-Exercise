@@ -19,7 +19,7 @@ describe(`2. strings`, function () {
     });
   });
 
-  it(`capitalize: should return the input in all-caps`, function  {
+  it(`capitalize: should return the input in all-caps`, function () {
     const result = stringsAnswers.capitalize(`this is web game development`);
     
     expect(result).toEqual(`THIS IS WEB GAME DEVELOPMENT`);

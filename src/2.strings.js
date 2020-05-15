@@ -18,7 +18,13 @@ function capitalize(str) {
   return ;
 }
 
+// splitString: should divide a string into substrings and return an array
+// Example: "Jane,Doe,21"  =>  [ "Jane", "Doe", "21" ]
+function splitString(str, splitAt = `,`) {
+  return ;
+}
 module.exports = {
   reverseString,
-  capitalize
+  capitalize,
+  splitString
 };

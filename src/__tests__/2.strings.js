@@ -25,4 +25,10 @@ describe(`2. strings`, function () {
     expect(result).toEqual(`THIS IS WEB GAME DEVELOPMENT`);
   });
 
+  it(`splitString: should divide a string into substrings and return an array`, function() {
+    const result = stringsAnswers.splitString(`Jane,Doe,21`);
+    const expected = [ `Jane`, `Doe`,`21` ];
+    expect(result).toEqual(expect.arrayContaining(expected));
+  }); 
+
 });

@@ -1,4 +1,4 @@
-const logicalOperatorsAnswers = require(`../4.logicalOperators`);
+const logicalOperatorsAnswers = require(`../5.logicalOperators`);
 
 describe(`4. logical operators`, function () {
   it(`or: should return true if either a or b are truthy. False, if both are false`, function () {

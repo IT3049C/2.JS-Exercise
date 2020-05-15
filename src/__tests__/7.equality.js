@@ -1,4 +1,4 @@
-const equalityAnswers = require(`../6.equality`);
+const equalityAnswers = require(`../7.equality`);
 
 describe(`6. Equality questions`, function () {
 

@@ -1,4 +1,4 @@
-const flowControlAnswers = require(`../5.flowControl`);
+const flowControlAnswers = require(`../6.flowControl`);
 
 describe(`5. flow control`, function () {
   it(`you should be able to conditionally branch your code`, function () {

@@ -9,13 +9,13 @@ function reverseString(str) {
    * 
    * Can even be done on one line
    */
-  return str.split(``).reverse().join(``);
+  return ;
 }
 
 //capitalize: should return the input in all-caps
 // Example: "this is a string" => "THIS IS A STRING"
 function capitalize(str) {
-  return str.toUpperCase();
+  return ;
 }
 
 module.exports = {

@@ -18,7 +18,12 @@ function capitalize(str) {
   return str.toUpperCase();
 }
 
+function splitString(str, splitAt = `,`) {
+  return str.split(splitAt);
+}
+
 module.exports = {
   reverseString,
-  capitalize
+  capitalize,
+  splitString
 };

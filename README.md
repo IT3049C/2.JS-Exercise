@@ -8,7 +8,7 @@ Instructions to this assignment can be found [here](https://it3049c.github.io/Ma
 - [ ] update the assignment checks above to the correct link. [Instructions here](https://it3049c.github.io/Material/Assignments/1.Online_Portfolio/extras/updating_assignment_checks_banner/)
 - [ ] make sure the assignment checks pass
 - [ ] fill out the self evaluation and Reflection
-- [ ] submit the repository and the hosted github pages to Canvas
+- [ ] submit the repository link on Canvas
 
 ## Self-Evaluation: 
 how many points out of 20 do you deserve on this assignment: 

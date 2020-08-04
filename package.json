@@ -4,7 +4,8 @@
   "scripts": {
     "start": "node index.js",
     "lint": "./node_modules/.bin/eslint src/**/*.js",
-    "test": "./node_modules/.bin/jest"
+    "test": "./node_modules/.bin/jest",
+    "postinstall": "node .scripts/badge.js"
   },
   "dependencies": {
     "@types/jest": "^25.2.2",
@@ -12,6 +13,8 @@
     "underscore": "1.8.x"
   },
   "devDependencies": {
-    "eslint": "^2.8.0"
+    "eslint": "^2.8.0",
+    "simple-git": "^2.5.0",
+    "line-replace": "^2.0.1"
   }
 }

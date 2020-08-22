@@ -1,27 +1,21 @@
 const flowControlAnswers = require(`../6.flowControl`);
 
-describe(`5. flow control`, function () {
-  it(`you should be able to conditionally branch your code`, function () {
-    let num = 0;
+describe(`5.flowControl`, function () {
+  it(`returns number when not a multiple of 3 or 5: 1`, () => expect(flowControlAnswers.fizzBuzz(1)).toEqual(1));
+  it(`returns number when not a multiple of 3 or 5: 11`, () => expect(flowControlAnswers.fizzBuzz(11)).toEqual(11));
+  it(`returns number when not a multiple of 3 or 5: 21`, () => expect(flowControlAnswers.fizzBuzz(22)).toEqual(22));
 
-    while (num % 3 === 0 || num % 5 === 0) {
-      num = Math.floor(Math.random() * 10) + 1;
-    }
+  it(`returns fizz on multiple of 3: 3`, () => expect(flowControlAnswers.fizzBuzz(3)).toEqual(`fizz`));
+  it(`returns fizz on multiple of 3: 6`, () => expect(flowControlAnswers.fizzBuzz(6)).toEqual(`fizz`));
+  it(`returns fizz on multiple of 3: 9`, () => expect(flowControlAnswers.fizzBuzz(9)).toEqual(`fizz`));
 
-    expect(flowControlAnswers.fizzBuzz()).toBeFalsy();
-    expect(flowControlAnswers.fizzBuzz(`foo`)).toBeFalsy();
-    expect(flowControlAnswers.fizzBuzz(2)).toEqual(2);
-    expect(flowControlAnswers.fizzBuzz(101)).toEqual(101);
+  it(`returns buzz on multiple of 5: 5`, () => expect(flowControlAnswers.fizzBuzz(5)).toEqual(`buzz`));
+  it(`returns buzz on multiple of 5: 10`, () => expect(flowControlAnswers.fizzBuzz(10)).toEqual(`buzz`));
+  it(`returns buzz on multiple of 5: 20`, () => expect(flowControlAnswers.fizzBuzz(20)).toEqual(`buzz`));
 
-    expect(flowControlAnswers.fizzBuzz(3)).toEqual(`fizz`);
-    expect(flowControlAnswers.fizzBuzz(6)).toEqual(`fizz`);
-    expect(flowControlAnswers.fizzBuzz(num * 3)).toEqual(`fizz`);
+  it(`returns number when a multiple of 3 and 5: 15`, () => expect(flowControlAnswers.fizzBuzz(15)).toEqual(`fizzbuzz`));
+  it(`returns number when a multiple of 3 and 5: 30`, () => expect(flowControlAnswers.fizzBuzz(30)).toEqual(`fizzbuzz`));
+  it(`returns number when a multiple of 3 and 5: 45`, () => expect(flowControlAnswers.fizzBuzz(45)).toEqual(`fizzbuzz`));
 
-    expect(flowControlAnswers.fizzBuzz(5)).toEqual(`buzz`);
-    expect(flowControlAnswers.fizzBuzz(10)).toEqual(`buzz`);
-    expect(flowControlAnswers.fizzBuzz(num * 5)).toEqual(`buzz`);
-
-    expect(flowControlAnswers.fizzBuzz(15)).toEqual(`fizzbuzz`);
-    expect(flowControlAnswers.fizzBuzz(num * 3 * 5)).toEqual(`fizzbuzz`);
-  });
+  it(`returns false if the arguement is not a number`, () => expect(flowControlAnswers.fizzBuzz(`foo`)).toBeFalsy());
 });

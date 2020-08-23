@@ -17,5 +17,5 @@ describe(`5.flowControl`, function () {
   it(`returns number when a multiple of 3 and 5: 30`, () => expect(flowControlAnswers.fizzBuzz(30)).toEqual(`fizzbuzz`));
   it(`returns number when a multiple of 3 and 5: 45`, () => expect(flowControlAnswers.fizzBuzz(45)).toEqual(`fizzbuzz`));
 
-  it(`returns false if the arguement is not a number`, () => expect(flowControlAnswers.fizzBuzz(`foo`)).toBeFalsy());
+  it(`returns false if the argument is not a number`, () => expect(flowControlAnswers.fizzBuzz(`foo`)).toEqual(false));
 });

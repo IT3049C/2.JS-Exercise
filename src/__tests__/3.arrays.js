@@ -1,63 +1,75 @@
 const arraysAnswers = require(`../3.arrays`);
 
-describe(`Arrays Questions`, function () {
-  let a;
-
-  beforeEach(function () {
-    a = [ 1, 2, 3, 4 ];
+describe(`3.arrays`, function () {
+  describe(`.indexOf()`, () => {
+    it(`finds the first index found for the search item`, () => expect(arraysAnswers.indexOf([ 1, 2, 3, 3, 3, 4, 5 ], 3)).toEqual(2));
+    it(`returns -1 when the search item is not found`, () => expect(arraysAnswers.indexOf([ 1, 2, 3, 3, 3, 4, 5 ], 6)).toEqual(-1));
   });
 
-  it(`IndexOf: you should be able to determine the location of an item in an array`, function () {
-    expect(arraysAnswers.indexOf(a, 3)).toEqual(2);
-    expect(arraysAnswers.indexOf(a, 5)).toEqual(-1);
+  describe(`.sum()`, () => {
+    it(`gets the sum of 1, 2, 3, 4, 5 as 15`, () => expect(arraysAnswers.sum([ 1, 2, 3, 4, 5 ])).toEqual(15));
+    it(`gets the sum of 1, -1, 2, -2, 5 as 5`, () => expect(arraysAnswers.sum([ 1, -1, 2, -2, 5 ])).toEqual(5));
   });
 
-  it(`Sum: you should be able to sum the items of an array`, function () {
-    expect(arraysAnswers.sum(a)).toEqual(10);
+  describe(`.filterOut()`, () => {
+    let testArray = [];
+
+    /**
+     * beforeEach is run before every test. Since these tests share the same array, instead of copying it everywhere,
+     * there is a possibility of mutations happening to our testArray as all the tests are executed. Therefore we are
+     * reseting the array before each test run.
+     */
+    beforeEach(() => testArray = [ 3, 10, 3, 1, 2, 4, 6, 9, 2, 5, 2, 2, 3, 2, 4, 2, 4, 8, 10, 3 ]);
+
+    it(`removes all 1's from an array`, () => 
+      expect(arraysAnswers.filterOut(testArray, 1)).toEqual([ 3, 10, 3, 2, 4, 6, 9, 2, 5, 2, 2, 3, 2, 4, 2, 4, 8, 10, 3 ]));
+    it(`removes all 2's from an array`, () => 
+      expect(arraysAnswers.filterOut(testArray, 2)).toEqual([ 3, 10, 3, 1, 4, 6, 9, 5, 3, 4, 4, 8, 10, 3 ]));
+    it(`removes all 3's from an array`, () => 
+      expect(arraysAnswers.filterOut(testArray, 3)).toEqual([ 10, 1, 2, 4, 6, 9, 2, 5, 2, 2, 2, 4, 2, 4, 8, 10 ]));
+    it(`removes all 4's from an array`, () => 
+      expect(arraysAnswers.filterOut(testArray, 4)).toEqual([ 3, 10, 3, 1, 2, 6, 9, 2, 5, 2, 2, 3, 2, 2, 8, 10, 3 ]));
+    it(`removes all 5's from an array`, () => 
+      expect(arraysAnswers.filterOut(testArray, 5)).toEqual([ 3, 10, 3, 1, 2, 4, 6, 9, 2, 2, 2, 3, 2, 4, 2, 4, 8, 10, 3 ]));
+    it(`removes all 6's from an array`, () => 
+      expect(arraysAnswers.filterOut(testArray, 6)).toEqual([ 3, 10, 3, 1, 2, 4, 9, 2, 5, 2, 2, 3, 2, 4, 2, 4, 8, 10, 3 ]));
+    it(`removes all 7's from an array`, () => 
+      expect(arraysAnswers.filterOut(testArray, 7)).toEqual([ 3, 10, 3, 1, 2, 4, 6, 9, 2, 5, 2, 2, 3, 2, 4, 2, 4, 8, 10, 3 ]));
+    it(`removes all 8's from an array`, () => 
+      expect(arraysAnswers.filterOut(testArray, 8)).toEqual([ 3, 10, 3, 1, 2, 4, 6, 9, 2, 5, 2, 2, 3, 2, 4, 2, 4, 10, 3 ]));
+    it(`removes all 9's from an array`, () => 
+      expect(arraysAnswers.filterOut(testArray, 9)).toEqual([ 3, 10, 3, 1, 2, 4, 6, 2, 5, 2, 2, 3, 2, 4, 2, 4, 8, 10, 3 ]));
+    it(`removes all 10's from an array`, () => 
+      expect(arraysAnswers.filterOut(testArray, 10)).toEqual([ 3, 3, 1, 2, 4, 6, 9, 2, 5, 2, 2, 3, 2, 4, 2, 4, 8, 3 ]));
   });
 
-  it(`Filter: Should filter out all instances of a value from an array`, function () {
-    a.push(2); // Make sure the value appears more than one time
-    a.push(2); // Make sure the value appears more than one time in a row
-    const result = arraysAnswers.filterOut(a, 2);
-
-    expect(result).toHaveLength(3);
-    expect(result.join(` `)).toEqual(`1 3 4`);
+  describe(`.append()`, () => {
+    it(`puts a number on the back of an array`, () => expect(arraysAnswers.append([ 1, 2 ], 3)).toEqual([ 1, 2, 3 ]));
   });
 
-  it(`Append: you should be able to add an item to the end of an array`, function () {
-    const result = arraysAnswers.append(a, 10);
-
-    expect(result).toHaveLength(5);
-    expect(result[result.length - 1]).toEqual(10);
+  describe(`.truncate()`, () => {
+    it(`removes the last item from an array`, () => expect(arraysAnswers.truncate([ 1, 2, 3 ])).toEqual([ 1, 2 ]));
   });
 
-  it(`Truncate: you should be able to remove the last item of an array`, function () {
-    const result = arraysAnswers.truncate(a);
-
-    expect(result).toHaveLength(3);
-    expect(result.join(` `)).toEqual(`1 2 3`);
+  describe(`.concat()`, () => {
+    it(`combines two array, putting the second array arguement behind the first`, () =>
+      expect(arraysAnswers.concat([ 1, 2, 3 ], [ 4, 5 ])).toEqual([ 1, 2, 3, 4, 5 ]));
   });
 
-  it(`Concat: you should be able to join together two arrays`, function () {
-    const c = [ `a`, `b`, `c`, 1 ];
-    const result = arraysAnswers.concat(a, c);
-
-    expect(result).toHaveLength(8);
-    expect(result.join(` `)).toEqual(`1 2 3 4 a b c 1`);
+  describe(`.insert()`, () => {
+    it(`inserts a value at the desired index`, () => 
+      expect(arraysAnswers.insert([ `Jan`, `March`, `April`, `June` ], `Feb`, 1)).toEqual([ `Jan`, `Feb`, `March`, `April`, `June` ]));
   });
 
-  it(`Insert: you should be able to add an item at the specified index of an array`, function () {
-    const result = arraysAnswers.insert(a, `z`, 2);
+  describe(`.square()`, () => {
+    it(`squares all elements in an array`, () => {
+      const result = arraysAnswers.square([ 1, 2, 3, 4 ]).join(` `);
 
-    expect(result).toHaveLength(5);
-    expect(result.join(` `)).toEqual(`1 2 z 3 4`);
-  });
+      if(result === `3 0 1 6`) {
+        return expect(`Take a look at how you're using exponents. ^ does not work`).toBeFalsy();
+      }
 
-  it(`Square: you should be able to square each number in an array`, function () {
-    const result = arraysAnswers.square(a);
-
-    expect(result).toHaveLength(4);
-    expect(result.join(` `)).toEqual(`1 4 9 16`);
+      return expect(result).toEqual(`1 4 9 16`);
+    });
   });
 });

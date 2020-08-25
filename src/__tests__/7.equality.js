@@ -1,6 +1,6 @@
 const equalityAnswers = require(`../7.equality`);
 
-describe(`6. Equality questions`, function () {
+describe(`6.equality`, function () {
 
   it(`strictEquality: compare value & type`, function () {
     expect(equalityAnswers.strictEquality(1, `1`)).toBeFalsy();

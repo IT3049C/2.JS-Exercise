@@ -17,6 +17,6 @@ Instructions to this assignment can be found [here](https://it3049c.github.io/Ma
 how many points out of 20 do you deserve on this assignment: 
 
 ## Self-Reflection:
+<!-- What did you learn that you found interesting -->
 
-
-### How long it took me to finish this?
+### How long it took you to finish this?

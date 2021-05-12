@@ -5,16 +5,22 @@
     "start": "node index.js",
     "lint": "./node_modules/.bin/eslint src/**/*.js",
     "test": "./node_modules/.bin/jest",
-    "postinstall": "node .scripts/badge.js"
+    "postinstall": "node .scripts/badge.js",
+    "test:1": "./node_modules/.bin/jest src/__tests__/1.numbers.js",
+    "test:2": "./node_modules/.bin/jest src/__tests__/2.strings.js",
+    "test:3": "./node_modules/.bin/jest src/__tests__/3.arrays.js",
+    "test:4": "./node_modules/.bin/jest src/__tests__/4.objects.js",
+    "test:5": "./node_modules/.bin/jest src/__tests__/5.logicalOperators.js",
+    "test:6": "./node_modules/.bin/jest src/__tests__/6.flowControls.js",
+    "test:7": "./node_modules/.bin/jest src/__tests__/7.equality.js"
   },
   "dependencies": {
     "@types/jest": "^25.2.2",
-    "jest": "^26.0.1",
-    "underscore": "1.8.x"
+    "jest": "^26.0.1"
   },
   "devDependencies": {
     "eslint": "^2.8.0",
-    "simple-git": "^2.5.0",
-    "line-replace": "^2.0.1"
+    "line-replace": "^2.0.1",
+    "simple-git": "^2.5.0"
   }
 }

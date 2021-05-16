@@ -4,7 +4,7 @@
   "scripts": {
     "start": "node index.js",
     "lint": "./node_modules/.bin/eslint src/**/*.js",
-    "test": "./node_modules/.bin/jest",
+    "test": "jest",
     "postinstall": "node .scripts/badge.js",
     "test:1": "./node_modules/.bin/jest src/__tests__/1.numbers.js",
     "test:2": "./node_modules/.bin/jest src/__tests__/2.strings.js",

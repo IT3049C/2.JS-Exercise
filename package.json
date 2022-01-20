@@ -2,9 +2,9 @@
   "name": "js-assessment",
   "description": "A test-driven assessment of JavaScript skills",
   "scripts": {
-    "start": "node index.js",
     "lint": "./node_modules/.bin/eslint src/**/*.js",
     "test": "jest",
+    "test:watch": "jest --watch",
     "postinstall": "node .scripts/badge.js",
     "test:1": "./node_modules/.bin/jest src/__tests__/1.numbers.js",
     "test:2": "./node_modules/.bin/jest src/__tests__/2.strings.js",

@@ -21,6 +21,6 @@
   "devDependencies": {
     "eslint": "^7.26.0",
     "line-replace": "^2.0.1",
-    "simple-git": "^2.39.0"
+    "simple-git": "^3.5.0"
   }
 }

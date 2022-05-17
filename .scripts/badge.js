@@ -1,4 +1,4 @@
-const git = require(`simple-git/promise`)(__dirname);
+const git = require(`simple-git`)(__dirname);
 const lineReplace = require(`line-replace`);
 
 async function main(){

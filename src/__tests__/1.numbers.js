@@ -64,6 +64,7 @@ describe(`1.numbers`, function () {
 
     it(`parses string 2342 as number 2342`, () => testParseInt(`2342`, 2342));
     it(`parses string 12 as number 12`, () => expect(numbersAnswers.parseInt(`12`)).toEqual(12));
+    it(`parses string 12 as number 12`, () => expect(numbersAnswers.parseInt(`12.4 dollars`)).toEqual(12));
     it(`parses string 12px as number 12`, () => expect(numbersAnswers.parseInt(`12px`)).toEqual(12));
     it(`parses hex code 0x12 as number 0`, () => {
       if (numbersAnswers.parseInt(`0x12`) === 18) {

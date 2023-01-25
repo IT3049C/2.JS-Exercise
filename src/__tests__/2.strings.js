@@ -18,6 +18,6 @@ describe(`2.strings`, () => {
     it(`splitString: should divide a string into substrings and return an array`, () =>
       expect(stringsAnswers.splitString(`Jane,Doe,21`)).toEqual([ `Jane`, `Doe`, `21` ]));
     it(`splitString: should divide a string into substrings and return an array`, () =>
-      expect(stringsAnswers.splitString(`Jane,Doe,21`)).toEqual([ `Jane`, `Doe`, `21` ]));
+      expect(stringsAnswers.splitString(`Jane-Doe-21`, `-`)).toEqual([ `Jane`, `Doe`, `21` ]));
   });
 });

@@ -5,13 +5,13 @@
     "lint": "./node_modules/.bin/eslint src/**/*.js",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:1": "./node_modules/.bin/jest src/__tests__/1.numbers.js",
-    "test:2": "./node_modules/.bin/jest src/__tests__/2.strings.js",
-    "test:3": "./node_modules/.bin/jest src/__tests__/3.arrays.js",
-    "test:4": "./node_modules/.bin/jest src/__tests__/4.objects.js",
-    "test:5": "./node_modules/.bin/jest src/__tests__/5.logicalOperators.js",
-    "test:6": "./node_modules/.bin/jest src/__tests__/6.flowControls.js",
-    "test:7": "./node_modules/.bin/jest src/__tests__/7.equality.js"
+    "test:1": "jest src/__tests__/1.numbers.js",
+    "test:2": "jest src/__tests__/2.strings.js",
+    "test:3": "jest src/__tests__/3.arrays.js",
+    "test:4": "jest src/__tests__/4.objects.js",
+    "test:5": "jest src/__tests__/5.logicalOperators.js",
+    "test:6": "jest src/__tests__/6.flowControls.js",
+    "test:7": "jest src/__tests__/7.equality.js"
   },
   "dependencies": {
     "@types/jest": "^27.4.0",
